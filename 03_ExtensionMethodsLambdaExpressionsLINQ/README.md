@@ -11,7 +11,7 @@ Table of Contents
 5. LINQ Queries
 
 
-Solution:
+Solution: 03_ExtensionMethodsLambdaExpressionsLINQ.sln
 
 Task Project: 01_Substring
 
