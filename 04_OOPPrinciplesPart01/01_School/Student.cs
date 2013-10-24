@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class Student : IPeople
+public class Student : IPeople, ICommentable
 {
     // Fields
-    private string name;
+    private string name, comments;
     private sbyte classNumber;
     
     // Properties
@@ -17,6 +17,12 @@ class Student : IPeople
         get { return this.name; }
     }
 
+    public string Comments
+    {
+        set { this.comments = value; }
+        get { return this.comments; }
+    }
+
     public sbyte ClassNumber
     {
         set { this.classNumber = value; }
@@ -24,9 +30,10 @@ class Student : IPeople
     }
 
     // Constructor
-    public Student(string name, sbyte classNumber)
+    public Student(string name, sbyte classNumber, string comments = null)
     {
         this.Name = name;
+        this.Comments = comments;
         this.ClassNumber = classNumber;
     }
 }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class School
+public class School
 {
     // Fields
     private string name;
-    private List<StudentsClass> studentsClasses;
+    private Dictionary<string, StudentsClass> studentsClasses;
 
     // Properties
     public string Name
@@ -17,7 +17,7 @@ class School
         get { return this.name; }
     }
 
-    public List<StudentsClass> StudentsClasses
+    public Dictionary<string, StudentsClass> StudentsClasses
     {
         get { return this.studentsClasses; }
     }
@@ -26,20 +26,20 @@ class School
     public School( string name )
     {
         this.name = name;
-        this.studentsClasses = new List<StudentsClass>();
+        this.studentsClasses = new Dictionary<string, StudentsClass>();
     }
 
     // Methonds
-    public void AddClass(StudentsClass param)
+    public void AddClass(StudentsClass param) // Check for unique identifier
     {
-        foreach (var studentsClass in studentsClasses)
+        if (studentsClasses.ContainsKey(param.UniqueIdentifier))
         {
-            if (studentsClass.UniqueIdentifier == param.UniqueIdentifier)
-            {
-                throw new ArgumentException("Class identifier must be unique");
-            }
+            throw new ArgumentException("Class identifier must be unique");
         }
-        StudentsClasses.Add(param);
+        else
+        {
+            StudentsClasses.Add(param.UniqueIdentifier, param);
+        }
     }
 }
 

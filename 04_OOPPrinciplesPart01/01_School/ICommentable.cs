@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public interface IPeople
+public interface ICommentable
 {
-    // Properties
-    string Name { get; set; }
+    string Comments { get; set; }
 }
 

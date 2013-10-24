@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public interface IPeople
+interface ISound
 {
-    // Properties
-    string Name { get; set; }
+    void produceSound();
 }
-

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class Teacher : IPeople
+public class Teacher : IPeople, ICommentable
 {
     // Fields
-    private string name;
+    private string name, comments;
     private List<Discipline> disciplines;
 
     // Properties
@@ -17,16 +17,23 @@ class Teacher : IPeople
         get { return this.name; }
     }
 
+    public string Comments
+    {
+        set { this.comments = value; }
+        get { return this.comments; }
+    }
+
     public List<Discipline> Disciplines
     {
         get { return this.disciplines; }
     }
 
     // Constructor
-    public Teacher(string name)
+    public Teacher(string name, string comments = null)
     {
         this.Name = name;
         this.disciplines = new List<Discipline>();
+        this.Comments = comments;
     }
 
     // Methods
