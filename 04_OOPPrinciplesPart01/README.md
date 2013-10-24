@@ -1,11 +1,15 @@
 Homeworks – Telerik Software Academy
+
 1. Fundamental Principles of OOP
+
 2. Inheritance
-    a. Class Hierarchies
-    b. Inheritance and Access Levels
+    - Class Hierarchies
+    - Inheritance and Access Levels
+
 3. Abstraction
-    a. Abstract Classes 
-    b. Interfaces
+    - Abstract Classes 
+    - Interfaces
+
 4. Encapsulation
 
 
